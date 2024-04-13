@@ -60,7 +60,7 @@ function getURLsFromHTML(htmlBody, baseURL) {
       const url = new URL(el.href);
       return url.href;
     } catch (err) {
-      console.log('Error from getURLsFromHTML:', err.message, err.input);
+      console.log(`Error getting "${el.href}"`, err.message);
     }
   });
   return arrayOfURLs;
